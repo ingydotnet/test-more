@@ -1,8 +1,8 @@
 package Test::Builder2::StackBuilder;
 
 use 5.008001;
-use Test::Builder2::Mouse;
-use Test::Builder2::Mouse::Exporter;
+use Test::Builder2::Mousse;
+use Test::Builder2::Mousse::Exporter;
 use Test::Builder2::Types;
 
 use Carp qw(confess);
@@ -43,7 +43,7 @@ Exports a keyword buildstack to build up an Attribute array and methods consista
 
 =cut
 
-Test::Builder2::Mouse::Exporter->setup_import_methods(
+Test::Builder2::Mousse::Exporter->setup_import_methods(
     as_is => [ 'buildstack' ],
 );
 
@@ -71,5 +71,5 @@ sub buildstack ($;$) {
 }
 
 
-no Test::Builder2::Mouse;
+no Test::Builder2::Mousse;
 1;

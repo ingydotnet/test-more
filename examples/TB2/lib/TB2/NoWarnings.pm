@@ -35,7 +35,7 @@ plan is already set, but it doesn't.
     package TB2::NoWarnings::Role;
 
     use Carp;
-    use Test::Builder2::Mouse::Role;
+    use Test::Builder2::Mousse::Role;
 
     my $Started = 0;    # Is our warning handler set up?
     my @Warnings;       # Storage for the warnings

@@ -1,5 +1,5 @@
 package Test::Builder2::Streamer::Print;
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 with 'Test::Builder2::Streamer';
 
 
@@ -68,5 +68,5 @@ sub write {
     $self->safe_print($self->output_fh, @_);
 }
 
-no Test::Builder2::Mouse;
+no Test::Builder2::Mousse;
 1;

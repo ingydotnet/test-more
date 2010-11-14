@@ -38,7 +38,7 @@ my $CLASS = "Test::Builder2::Counter";
 
 # Test bad counts
 {
-    # The errors from Mouse are messy, just make sure it fails
+    # The errors from Mousse are messy, just make sure it fails
     my $count = $CLASS->create;
     ok !eval { $count->set(1.1) };
     ok !eval { $count->set(-1) };

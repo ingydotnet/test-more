@@ -8,7 +8,7 @@ use Test::More;
 {
     package Foo;
 
-    use Test::Builder2::Mouse;
+    use Test::Builder2::Mousse;
     with 'Test::Builder2::Singleton';
 }
 

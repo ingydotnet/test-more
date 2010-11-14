@@ -7,7 +7,7 @@ use Test::More;
 
 {
     package My::Formatter;
-    use Test::Builder2::Mouse;
+    use Test::Builder2::Mousse;
 
     extends 'Test::Builder2::Formatter';
 

@@ -1,6 +1,6 @@
 package Test::Builder2::Streamer::TAP;
 
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 extends 'Test::Builder2::Streamer::Print';
 
 
@@ -60,5 +60,5 @@ sub write {
     $self->safe_print($fh, @_);
 }
 
-no Test::Builder2::Mouse;
+no Test::Builder2::Mousse;
 1;

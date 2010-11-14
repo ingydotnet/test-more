@@ -1,6 +1,6 @@
 package TB2::Formatter::SimpleHTML;
 
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 extends "Test::Builder2::Formatter";
 
 

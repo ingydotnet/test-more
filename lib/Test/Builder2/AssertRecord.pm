@@ -1,6 +1,6 @@
 package Test::Builder2::AssertRecord;
 
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 
 use Carp;
 
@@ -39,7 +39,7 @@ Useful for diagnostics and stack traces.
         subroutine => $subroutine
     });
 
-The normal Mouse constructor.  You must supply all the caller
+The normal Mousse constructor.  You must supply all the caller
 information manually.
 
 You should use C<new_from_caller>.
@@ -114,6 +114,6 @@ has subroutine =>
   isa           => 'Str',
 ;
 
-no Test::Builder2::Mouse;
+no Test::Builder2::Mousse;
 
 1;

@@ -9,7 +9,7 @@ BEGIN {
     package Test::NoWarnings;
 
     require Test::Simple;
-    use Test::Builder2::Mouse::Role;
+    use Test::Builder2::Mousse::Role;
 
     my @Warnings;
 

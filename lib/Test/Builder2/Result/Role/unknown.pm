@@ -1,10 +1,10 @@
 package Test::Builder2::Result::Role::unknown;
 
-use Test::Builder2::Mouse::Role;
+use Test::Builder2::Mousse::Role;
 
 sub is_unknown { 1 }
 
-no Test::Builder2::Mouse::Role;
+no Test::Builder2::Mousse::Role;
 
 1;
 

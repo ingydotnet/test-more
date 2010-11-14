@@ -27,7 +27,7 @@ kill the test when an assert fails.
 {
     package TB2::DieOnFail::Role;
 
-    use Test::Builder2::Mouse::Role;
+    use Test::Builder2::Mousse::Role;
 
     after assert_end => sub {
         my $self   = shift;

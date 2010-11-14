@@ -3,7 +3,8 @@ package Test::Builder2::Singleton;
 # This is a role which implements a singleton
 
 use Carp;
-use Test::Builder2::Mouse::Role;
+use Test::Builder2::Mousse();
+use Test::Builder2::Mousse::Role;
 
 
 =head1 NAME
@@ -14,7 +15,7 @@ Test::Builder2::Singleton - A singleton role for TB2
 
   package TB2::Thing;
 
-  use Test::Builder2::Mouse;
+  use Test::Builder2::Mousse;
   with 'Test::Builder2::Singleton';
 
   my $thing      = TB2::Thing->singleton;
@@ -46,7 +47,7 @@ If there is no singleton one will be created by calling create().
 
 =cut
 
-# What?!  No class variables in Mouse?!  Now I have to write the
+# What?!  No class variables in Mousse?!  Now I have to write the
 # accessor by hand, bleh.
 {
     my %singletons;
@@ -85,14 +86,14 @@ sub new {
 
 Creates a new, non-singleton object.
 
-Currently calls Mouse's new method.
+Currently calls Mousse's new method.
 
 =cut
 
 sub create {
     my $class = shift;
 
-    return $class->Test::Builder2::Mouse::Object::new(@_);
+    return $class->Test::Builder2::Mousse::Object::new(@_);
 }
 
 
@@ -115,6 +116,6 @@ sub make_singleton {
     return $class->create;
 }
 
-no Test::Builder2::Mouse::Role;
+no Test::Builder2::Mousse::Role;
 
 1;

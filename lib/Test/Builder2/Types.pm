@@ -1,12 +1,13 @@
 package Test::Builder2::Types;
 
-use Test::Builder2::Mouse::Util qw(load_class);
-use Test::Builder2::Mouse::Util::TypeConstraints;
+use Test::Builder2::Mousse();
+use Test::Builder2::Mousse::Util qw(load_class);
+use Test::Builder2::Mousse::Util::TypeConstraints;
 
 
 =head1 NAME
 
-Test::Builder2::Types - Mouse types used by Test::Builder2
+Test::Builder2::Types - Mousse types used by Test::Builder2
 
 =head1 SYNOPSIS
 
@@ -14,7 +15,7 @@ Test::Builder2::Types - Mouse types used by Test::Builder2
 
 =head1 DESCRIPTION
 
-This defines custom Mouse types used by Test::Builder2.
+This defines custom Mousse types used by Test::Builder2.
 
 =head2 Types
 
@@ -40,6 +41,6 @@ subtype 'Test::Builder2::LoadableClass', as 'ClassName';
 coerce 'Test::Builder2::LoadableClass', from 'Str', via { load_class($_); $_ };
 
 
-no Test::Builder2::Mouse::Util::TypeConstraints;
+no Test::Builder2::Mousse::Util::TypeConstraints;
 
 1;

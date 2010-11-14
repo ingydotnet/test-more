@@ -1,6 +1,6 @@
 package Test::Builder2::Formatter::Null;
 
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 
 extends 'Test::Builder2::Formatter';
 

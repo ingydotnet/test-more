@@ -1,7 +1,7 @@
 package Test::Builder2::History;
 
 use Carp;
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 use Test::Builder2::StackBuilder;
 
 with 'Test::Builder2::Singleton';
@@ -226,6 +226,6 @@ sub consume {
 };
 
 
-no Test::Builder2::Mouse;
+no Test::Builder2::Mousse;
 1;
 

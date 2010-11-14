@@ -37,7 +37,7 @@ after the assert was called instead.
 {
     package TB2::DebugOnFail::Role;
 
-    use Test::Builder2::Mouse::Role;
+    use Test::Builder2::Mousse::Role;
 
     after assert_end => sub {
         my $self   = shift;

@@ -1,7 +1,7 @@
 package Test::Builder2::Formatter::POSIX;
 
 use strict;
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 
 extends 'Test::Builder2::Formatter';
 

@@ -1,7 +1,7 @@
 package Test::Builder2::Formatter;
 
 use Carp;
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 use Test::Builder2::Types;
 
 with 'Test::Builder2::Singleton';
@@ -15,7 +15,7 @@ Test::Builder2::Formatter - Base class for formating test results
 
   package Test::Builder2::Formatter::SomeFormat;
 
-  use Test::Builder2::Mouse;
+  use Test::Builder2::Mousse;
   extends "Test::Builder2::Formatter;
 
 =head1 DESCRIPTION

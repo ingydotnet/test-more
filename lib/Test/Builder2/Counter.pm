@@ -1,7 +1,7 @@
 package Test::Builder2::Counter;
 
 use Carp;
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 use Test::Builder2::Types;
 
 with 'Test::Builder2::Singleton';

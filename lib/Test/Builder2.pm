@@ -1,7 +1,7 @@
 package Test::Builder2;
 
 use 5.008001;
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 use Test::Builder2::Types;
 
 with 'Test::Builder2::Singleton';
@@ -49,17 +49,17 @@ with more behavior or placed into roles that can be applied to the TB2
 object as desired.
 
 
-=head2 Mouse
+=head2 Mousse
 
-Test::Builder2 is a L<Mouse> object (like Moose, but smaller) to take
+Test::Builder2 is a L<Mousse> object (like Moose, but smaller) to take
 advantage of the advances in OO over the last 10 years.  To avoid
-dependencies and bugs caused by changes in Mouse, Test::Builder2 ships
-and uses its own copy of Mouse called L<Test::Builder2::Mouse>.  All
-Mouse classes have L<Test::Builder2::> prepended.
+dependencies and bugs caused by changes in Mousse, Test::Builder2 ships
+and uses its own copy of Mousse called L<Test::Builder2::Mousse>.  All
+Mousse classes have L<Test::Builder2::> prepended.
 
-You can take advantage of all the features Mouse has to offer,
+You can take advantage of all the features Mousse has to offer,
 including roles and meta stuff.  You are free to use
-Test::Builder2::Mouse in your TB2 derived classes or use Mouse
+Test::Builder2::Mousse in your TB2 derived classes or use Mousse
 directly.
 
 
@@ -397,7 +397,7 @@ sub accept_result {
 }
 
 
-no Test::Builder2::Mouse;
+no Test::Builder2::Mousse;
 
 1;
 

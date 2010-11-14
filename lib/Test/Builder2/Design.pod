@@ -140,7 +140,7 @@ For internal use, roles can be applied to the TB2 singleton to expand its functi
 
 =head2 TB2 Events
 
-The primary way test libraries will alter the behavior of TB2 is by hooking into test events, such as an assert ending or the plan being set.  Rather than design an event callback system, method modifiers (provided by Mouse) will be used.  Test libraries can simply put modifiers on public TB2 methods and TB2 methods will be decomposed to correspond with test events.  This allows event modifiers and callbacks to stack in a sane way.  Not having an explicit callback system allows test authors to extend TB2 in ways not anticipated.  Finally, TB2 is not gummed up by checking for callbacks all over the place.
+The primary way test libraries will alter the behavior of TB2 is by hooking into test events, such as an assert ending or the plan being set.  Rather than design an event callback system, method modifiers (provided by Mousse) will be used.  Test libraries can simply put modifiers on public TB2 methods and TB2 methods will be decomposed to correspond with test events.  This allows event modifiers and callbacks to stack in a sane way.  Not having an explicit callback system allows test authors to extend TB2 in ways not anticipated.  Finally, TB2 is not gummed up by checking for callbacks all over the place.
 
 
 =head1 Use Cases
@@ -336,11 +336,11 @@ There is a final case to consider, this:
 This assert has multiple asserts inside it, but the final one is the important one.  In this case, TB2 must display them all as if they came from the point where C<< file_contents_ok() >> was called.  Also make sure that the results of the two C<ok()>s get output.  And do it all in the right order.  This is an open problem.
 
 
-=head1 Mouse
+=head1 Mousse
 
-TB2 uses Mouse, which is the Moose interface without dependencies and sluggishness.  It takes a great risk in relying on a complicated module.  The decision was made on the speculation that if TB2 used a real object system that might allow the design to go in interesting directions not otherwise easily available.
+TB2 uses Mousse, which is the Moose interface without dependencies and sluggishness.  It takes a great risk in relying on a complicated module.  The decision was made on the speculation that if TB2 used a real object system that might allow the design to go in interesting directions not otherwise easily available.
 
-Two user visible design features have come out of this.  First is that TB2's event system, rather than having explict event callbacks, is modelled by simply wrapping public TB2 methods using Mouse method wrappers.  This greatly simplifies designing and implementing test events and provides a more flexible system since users can safely wrap any public method rather than waiting for TB2 to add a hook.  Hook points fall naturally out of decomposing the steps of handling results.
+Two user visible design features have come out of this.  First is that TB2's event system, rather than having explict event callbacks, is modelled by simply wrapping public TB2 methods using Mousse method wrappers.  This greatly simplifies designing and implementing test events and provides a more flexible system since users can safely wrap any public method rather than waiting for TB2 to add a hook.  Hook points fall naturally out of decomposing the steps of handling results.
 
 The second is the ability to compose TB2 with roles.  Rather than adding functionality by subclassing, it can be added with roles.  Subclassing is untenable in the long run.  Test::A will want to use their TB2 subclass while Test::B will want to use its own TB2 subclass.  They can't both have the singleton.  Rather than come up with increasingly complicated ways to reconcile this, users can add functionality to TB2 with roles applied to the TB2 singleton.  Roles are add, rather than modify, functionality.  Collisions will only occur in method names and will be very clear, about the same level of risk as exporting a function.  Modifications of existing functionality comes from method modifiers outlines above.
 
@@ -348,17 +348,17 @@ Roles also let TB2 shed large amounts of TB1 functionality, leaving them to role
 
 Roles and wrapping methods allow TB2 to remain a singleton while being extensible by multiple authors without explicit coordination.
 
-=head2 Mouse Risk Mitgation
+=head2 Mousse Risk Mitgation
 
-TB2 can have no dependencies, so it ships with its own copy of Mouse.
+TB2 can have no dependencies, so it ships with its own copy of Mousse.
 
-Mouse is a large, complicated system and TB2 has already hit bugs.  It has also had breakages from one version of Mouse to the next.  In order to avoid this, TB2 will ONLY use its shipped copy of Mouse.  That is, TB2 will ship with a copy of Mouse matched to that particular release.
+Mousse is a large, complicated system and TB2 has already hit bugs.  It has also had breakages from one version of Mousse to the next.  In order to avoid this, TB2 will ONLY use its shipped copy of Mousse.  That is, TB2 will ship with a copy of Mousse matched to that particular release.
 
-Finally, to avoid stepping on the installed copy of Mouse, TB2 will ship its version of Mouse as TB2::Mouse with all internal packages similarly changed.  This will avoid colliding with Mouse both on disk and in memory.
+Finally, to avoid stepping on the installed copy of Mousse, TB2 will ship its version of Mousse as TB2::Mousse with all internal packages similarly changed.  This will avoid colliding with Mousse both on disk and in memory.
 
-=head2 Mouse In The Core?
+=head2 Mousse In The Core?
 
-If TB2 ships with Mouse, and TB2 ships in the core of Perl... does that mean core Perl will ship Mouse?  No, it is not required that Perl ship Mouse.  TB2 will require that core Perl ships TB2::Mouse, but as such it is an internal module of TB2 and should not be used by the public.  Making Mouse publicly available in the core is a separate issue and would, in fact, require a separate copy of Mouse anyway.
+If TB2 ships with Mousse, and TB2 ships in the core of Perl... does that mean core Perl will ship Mousse?  No, it is not required that Perl ship Mousse.  TB2 will require that core Perl ships TB2::Mousse, but as such it is an internal module of TB2 and should not be used by the public.  Making Mousse publicly available in the core is a separate issue and would, in fact, require a separate copy of Mousse anyway.
 
 
 =head1 Overview

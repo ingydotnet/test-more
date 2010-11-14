@@ -3,8 +3,8 @@ package Test::Builder2::Result;
 use strict;
 
 use Carp;
-use Test::Builder2::Mouse;
-use Test::Builder2::Mouse::Util::TypeConstraints qw(enum);
+use Test::Builder2::Mousse;
+use Test::Builder2::Mousse::Util::TypeConstraints qw(enum);
 
 
 =head1 NAME
@@ -94,7 +94,7 @@ sub types {
 for my $type (keys %Types) {
     my $roles = $Types{$type};
 
-    Test::Builder2::Mouse::Meta::Class->create(
+    Test::Builder2::Mousse::Meta::Class->create(
         "Test::Builder2::Result::$type",
         superclasses => ["Test::Builder2::Result::Base"],
         roles        => [map { "Test::Builder2::Result::Role::$_" } @$roles],
@@ -132,7 +132,7 @@ sub new_result {
     return "Test::Builder2::Result::$type"->new(%args);
 }
 
-no Test::Builder2::Mouse;
+no Test::Builder2::Mousse;
 
 1;
 

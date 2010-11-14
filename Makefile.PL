@@ -54,6 +54,12 @@ if ($mm_ver =~ /_/) { # dev version
 my %Prereqs;
 $Prereqs{'ExtUtils::MakeMaker'} = 6.27 if $^O eq 'MSWin32';
 
+# Make a Mousse
+if ($ENV{SCHWERN_MAKES_A_MOUSSE}) {
+    warn "\n\nWarning: Making a Mousse\n\n";
+    system(qq{$^X -MMousse::Maker -e make_mousse "Test::Builder2::Mousse" > lib/Test/Builder2/Mousse.pm}) == 0
+        or die "Schwern goes hungry...";
+}
 
 WriteMakefile(
     NAME            => $PACKAGE,
@@ -86,8 +92,7 @@ WriteMakefile(
             MailingList =>      'http://groups.google.com/group/test-more-users',
         },
         no_index => {
-            directory => ["lib/Test/Builder2/Mouse/"],
-            file      => ["lib/Test/Builder2/Mouse.pm"],
+            file      => ["lib/Test/Builder2/Mousse.pm"],
         },
     }))
 );

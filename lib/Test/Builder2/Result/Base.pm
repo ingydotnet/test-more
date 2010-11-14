@@ -1,6 +1,6 @@
 package Test::Builder2::Result::Base;
 
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 use Test::Builder2::Types;
 
 my $CLASS = __PACKAGE__;
@@ -284,7 +284,7 @@ sub _alias {
     *{$class . "::" . $name} = $code;
 }
 
-no Test::Builder2::Mouse;
+no Test::Builder2::Mousse;
 
 1;
 

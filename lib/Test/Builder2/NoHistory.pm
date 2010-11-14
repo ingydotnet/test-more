@@ -1,6 +1,6 @@
 package Test::Builder2::NoHistory;
 use Carp;
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 extends qw{Test::Builder2::History};
 
 =head1 NAME
@@ -42,6 +42,6 @@ after results_push => sub{
 };
 
 
-no Test::Builder2::Mouse;
+no Test::Builder2::Mousse;
 1;
 

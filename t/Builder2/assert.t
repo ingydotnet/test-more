@@ -6,7 +6,7 @@ use strict;
     package TB2::Assert;
 
     require Test::Simple;
-    use Test::Builder2::Mouse::Role;
+    use Test::Builder2::Mousse::Role;
 
     # Die after assert_end to give TB2 the chance to
     # print the result

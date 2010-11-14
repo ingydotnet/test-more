@@ -3,7 +3,7 @@ package Test::Builder2::Formatter::TAP;
 use 5.008001;
 use strict;
 
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 extends 'Test::Builder2::Formatter::TAP::v13';
 
 

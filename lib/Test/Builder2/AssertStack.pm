@@ -1,7 +1,7 @@
 package Test::Builder2::AssertStack;
 
 use 5.008001;
-use Test::Builder2::Mouse;
+use Test::Builder2::Mousse;
 use Test::Builder2::Types;
 
 use Carp qw(confess);
@@ -148,6 +148,6 @@ sub pop {
 }
 
 
-no Test::Builder2::Mouse;
+no Test::Builder2::Mousse;
 
 1;

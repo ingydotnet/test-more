@@ -1,10 +1,10 @@
 package Test::Builder2::Result::Role::skip;
 
-use Test::Builder2::Mouse::Role;
+use Test::Builder2::Mousse::Role;
 
 sub is_skip { 1 }
 
-no Test::Builder2::Mouse::Role;
+no Test::Builder2::Mousse::Role;
 
 1;
 
